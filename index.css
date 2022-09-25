@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+
+
+}
+
+body::-webkit-scrollbar{
+    display:none;
+}
+
+#main{
+    width: 100%;
+}
+
+#home{
+    /* overflow: hidden; */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(15, 41, 34);
+    position: relative;
+}
+
+#controller{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#circle{
+    width: 22vw;
+    height: 22vw;
+    background-image: url(https://images.unsplash.com/photo-1535868463750-c78d9543614f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80);
+    border-radius: 50%;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+#text{
+    text-align: center;
+    position: absolute;
+    z-index: 22;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+#text h1{
+    display: flex;
+    justify-content: center;
+    font-family: "Hello Paris Sans Regular";
+    font-size:14vw;
+    line-height: 7vw;
+    font-weight:200;
+    letter-spacing: -12px;
+    color: rgb(189, 145, 80);
+    
+}
+#text h1 span{
+    display: inline-block;
+}
+
+#nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 1vw 9vw;
+    
+}
+#nleft a{
+    margin-right: 20px;
+    font-family: "Bigilla";
+    color: rgb(209, 120, 47);
+    font-weight: 900;
+}
+#nright a{
+    margin-right: 30px;
+    font-family: "Bigilla";
+    color: rgb(209, 120, 47);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.navelm a{
+    display: inline-block;
+}
+
+#ncenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+#ncenter h2{
+    font-family: "Bigilla";
+    color: rgb(255, 72, 0);
+    
+}
+
+#hbtmpart{
+    /* background-color: orange; */
+    display: flex;
+    position: absolute;
+    font-family: "Bigilla";
+    left: 50%;
+    transform: translate(-50%,0%);
+    bottom: 10%;
+    line-height: 1.6vw;
+    text-align: center;
+    color: rgb(209, 120, 47);
+}
+#hbtmpart h1{
+    font-size: 5vw;
+    font-weight: 100;
+    color: rgb(255, 55, 0);
+    
+}
+
+.hbtmparts{
+    margin-right: 25px;
+    margin-left: 25px;
+}
+.hbtmparts a{
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    color: rgb(209, 120, 47);
+}
+
+#hbcircle{
+    width: 75vw;
+    height: 75vw;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 22;
+    border: 1px dotted rgba(128, 128, 128, 0.473);
+    transform: translate(-50%,-50%);
+    /* background-color: red; */
+}
+#hviewcircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Vegawanty";
+    border: 1px solid rgb(174, 103, 41);
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    right: 9.55%;
+    top: 50%;
+    font-size: 1.2vw;
+    color: rgba(160, 96, 43, 0.799);
+    transform: translate(0%,-50%);
+    
+}
+#secondpage{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-image: url(https://images.unsplash.com/photo-1502239608882-93b729c6af43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-size: cover;
+    background-position: center;  
+    overflow: hidden; 
+    background-color: rgb(51, 55, 51);
+}
+
+#photoseries{
+    width: 100%;
+    display: flex;
+    height: 40vw;
+    gap: 20px;
+    position: absolute;
+    z-index: 2;
+    left: 0%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    top: 15%;
+    /* background-color: beige; */
+}
+
+#photoseries::-webkit-scrollbar {
+    display: none;
+}
+#photoseries .photos{
+    position: relative;
+    width:calc(25%);
+    height: 34vw;
+    flex-shrink: 0;
+    z-index: 27;
+    transform: translate(0%,0%);
+    /* margin-right: 20px; */
+    overflow: hidden;
+    background-color: aqua;
+}
+
+#photos:nth-child(1n):hover{
+    transition: all ease-in-out 0.5s;
+    transform: scale(0.8) rotate(30deg);
+    z-index: 99;
+}
+#photos:nth-child(2n):hover{
+    transition: all ease-in-out 0.5s;
+    transform: scale(0.8) skew(-10deg);
+    z-index: 99;
+}
+
+
+
+#scrolltext{
+    position: absolute;
+    top: 40%;
+    left: 32%;
+    transform: translate(0,-50%);
+    z-index: 28;
+    color: rgb(0, 0, 0);
+    font-family: "Bigilla";
+    overflow: hidden;
+    white-space: nowrap;
+}
+#scrolltext h1{
+    font-size: 3vw;
+}
+
+#third{
+    position: relative;
+    display:flex;
+    justify-content: flex-end;  
+    overflow: hidden;  
+    width: 100%;
+    height: 100vh;
+}
+
+.stripe{
+    cursor: pointer;
+    position: absolute;
+    z-index: 99999999;
+    font-family: "Gilroy";
+    font-weight: 
+    200;
+    font-size: 1vw;
+    overflow: hidden;
+    width: 4%;
+    height: 100%;
+    padding-left: 10px;
+    background-color: rgb(67, 66, 67);
+    padding-top: 7px;
+}
+
+
+.stripe:nth-child(2){
+    right: 16%;
+                                                                                    
+}
+.stripe:nth-child(3){
+    right:12%;
+    background-color: rgb(170, 122, 9);
+}
+.stripe:nth-child(4){
+    right: 8%;
+    background-color: rgb(0, 113, 92);
+    }
+
+.stripe:nth-child(5){
+    right: 4%;
+    background-color: rgb(92, 172, 137);
+}
+
+
+.stripe h4{
+    position: absolute;
+    bottom: 8%;
+    font-size: 15px;
+    font-family: "Vegawanty";
+    color: rgb(33, 41, 40) ;
+    transform-origin: 0% 50%;
+    transform: rotate(-90deg);
+    left:20px;
+}
+
+#ttext{
+    position: absolute;
+    left: 0%;
+    padding: 10vw 2vw;
+}
+
+#ttext h1{
+    font-size: 5vw;
+    font-family: "Hello Paris Sans ExtraLight";
+}
+#fourth{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(97, 97, 97)
+}
+
+#foptions{
+    position: relative;
+    left: 7%;
+    top: 50%;
+    /* background-color: aquamarine; */
+    transform: translate(0%,-50%);
+}
+.foptions1{
+    display: flex;
+
+}
+.foptions1 h1{
+    /* width: 100%; */
+    opacity: 0.5;
+    line-height: 10vw;
+    font-size: 5vw;
+    font-family: "Bigilla";
+}
+.foptions1 img{
+   opacity: 0;
+    z-index: -1;
+    position: absolute;
+    left: 0%;
+    
+    width: 10vw;
+    height: 11vw;
+    transform: translate(-50%,0%);
+
+}
+
+.foptions1 h1:hover{
+    cursor: pointer;
+    opacity: 1;
+    color: white;
+}
+
+
+.cross{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5vw;
+    height: 2.5vw;
+    z-index: 4444;
+    transform: rotate(0deg);
+    background-color: white;
+    border-radius: 50%;
+}
+
+.cross i{
+    font-size: 1.5vw;
+    pointer-events: none;
+}
+
+.strcnt{
+    opacity: 0;
+    pointer-events: none;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+    padding-left: 40px;
+    padding-top: 40px;
+    transform: translate(-50%,-50%);
+    width:500px;
+    height: 350px;
+    color:rgb(0, 0, 0);
+    
+}
+
+.strcnt h1{
+    font-size: 26px;
+    font-family: "Vegawanty";
+    line-height: 100px;
+}
+
+.strcnt p{
+    width:85%;
+    line-height: 19px;
+    font-size: 15px;
+    font-family:"Bigilla";
+}
+
+
+@media (max-width:500px){
+    .navelm{
+        display: none;
+    }
+
+    #text h1{
+        font-size: 23vw;
+        line-height: 12vw;
+    }
+
+    #hviewcircle{
+        width: 9vw;
+    height: 9vw;
+    font-size: 2.5vw;
+    right: 8.55%;
+
+    }
+
+
+#hbtmpart h1{
+    font-size: 8vw;
+}
+
+.hbtmparts a{
+    font-size: 4.5vw;
+    line-height: 4.5vw;
+}
+
+.photos{
+    width: 38vw;
+    height: 53vw;
+}
+#photoseries{
+    height: 51vw;
+    gap: 150px;
+}
+
+#scrolltext{
+    top: 48%;
+}
+    
+}
+
